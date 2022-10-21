@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Invoice Maker</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class=" text-center mb-3 fw-bold mt-5">Invoice Maker</h2>
+            </div>
+            <form id="inputform" class=" border rounded py-3 p-none">
+                <div class="row g-2">
+                    <div class="col">
+                        <label for="items" class=" form-label">Select Item</label>
+                        <select name="items" id="items" class=" form-select" required>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="qty" class=" form-label">Quaitity</label>
+                        <input type="number" class=" form-control" id="qty" required>
+                    </div>
+                    <div class="col">
+                        <button class=" btn btn-lg btn-primary h-100 w-100" id="btn">Add</button>
+                       
+                    </div>
+                </div>
+            </form>
+            <table class=" table table-hove align-middle">
+                <thead>
+                    <tr>
+                        <th>Items</th>
+                        <th class=" text-end">Unit Price</th>
+                        <th class=" text-end">Quantity</th>
+                        <th class=" text-end w-25">Cost</th>
+                    </tr>
+                </thead>
+                <tbody id="row">
+                    <tr>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class=" text-center fw-bolder" colspan="3">Total Cost</td>
+                        <td class=" text-end fw-bolder" id="total">0</td>
+                    </tr>
+                </tfoot>
+            </table>
+           <div class="text-end">
+            <button class=" btn btn-outline-primary p-none" onclick="print()"><i class=" bi bi-printer"></i>Print</button>
+            <!-- d-print-none -->
+           </div>
+        </div>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
